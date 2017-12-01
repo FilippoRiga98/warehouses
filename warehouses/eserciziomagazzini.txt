@@ -36,3 +36,5 @@ I prodotti che i magazzini possono contenere possono essere di 4 tipi :
   FACOLTATIVO : si implementi anche un camion che ogni 10 ordini rifornisca il WarehouseA con 5 prodotti di tipo casuale ed il WarehouseB con 10 prodotti di tipo casuale.
   
   Il programma terminerà la sua esecuzione quando non sarà più possibile evadere ordini, stampando TUTTE LE BOLLE prodotte.
+
+  FACOLTATIVO: aggiungere un form per inserire nuovi prodotti.
