@@ -1,7 +1,7 @@
 Scrivere un programma che simuli due Magazzini di prodotti di elettronica di consumo. 
 
-Il primo magazzino (WarehouseA) è più grande e può contenere fino a 100 prodotti.
-Il secondo magazzino (WarehouseB) è più piccolo e può contenere fino a 50 prodotti.
+Il primo magazzino (WarehouseA) Ã¨ piÃ¹ grande e puÃ² contenere fino a 100 prodotti.
+Il secondo magazzino (WarehouseB) Ã¨ piÃ¹ piccolo e puÃ² contenere fino a 50 prodotti.
 
 I prodotti che i magazzini possono contenere possono essere di 4 tipi :
 
@@ -10,18 +10,18 @@ I prodotti che i magazzini possono contenere possono essere di 4 tipi :
 - Smartphone
 - Frigoriferi
 
- All'avvio del programma WarehouseB è vuoto mentre WarehouseA possiede:
+ All'avvio del programma WarehouseB Ã¨ vuoto mentre WarehouseA possiede:
 
  - 10 Televisori
 - 5 Lavatrici
 - 50 Smartphone
 - 5 Frigoriferi
 
- Compito dei magazzini è evadere gli ordini che arrivano dal sito e-commerce di riferimento. Gli ordini sono composti da 2 prodotti casuali tra i 4 tipi disponibili (casuali e sono ammesse tipologie uguali). 
+ Compito dei magazzini Ã¨ evadere gli ordini che arrivano dal sito e-commerce di riferimento. Gli ordini sono composti da 2 prodotti casuali tra i 4 tipi disponibili (casuali e sono ammesse tipologie uguali). 
  
  Per evadere gli ordini viene utilizzata la logica di magazzino :
 
- - viene cercata disponibilità nel WarehouseA per ciascun prodotto dell'ordine e in caso di assenza di disponibilità viene ricercato il prodotto nel WarehouseB.
+ - viene cercata disponibilitÃ  nel WarehouseA per ciascun prodotto dell'ordine e in caso di assenza di disponibilitÃ  viene ricercato il prodotto nel WarehouseB.
 - quando tutti i prodotti vengono trovati viene emessa una Bolla che contiene le seguenti informazioni :
 
                                - id bolla a 8 cifre
@@ -35,6 +35,12 @@ I prodotti che i magazzini possono contenere possono essere di 4 tipi :
   
   FACOLTATIVO : si implementi anche un camion che ogni 10 ordini rifornisca il WarehouseA con 5 prodotti di tipo casuale ed il WarehouseB con 10 prodotti di tipo casuale.
   
+<<<<<<< HEAD
   Il programma terminerà la sua esecuzione quando non sarà più possibile evadere ordini, stampando TUTTE LE BOLLE prodotte.
 
   FACOLTATIVO: aggiungere un form per inserire nuovi prodotti.
+=======
+  FACOLTATIVO: implementare un form che aggiunga nuovi prodotti.
+  
+  Il programma terminerÃ  la sua esecuzione quando non sarÃ  piÃ¹ possibile evadere ordini, stampando TUTTE LE BOLLE prodotte.
+>>>>>>> 2017d18224f02ce1a917e7cd8c84df2797c59204
