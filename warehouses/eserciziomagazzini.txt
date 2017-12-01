@@ -1,0 +1,38 @@
+Scrivere un programma che simuli due Magazzini di prodotti di elettronica di consumo. 
+
+Il primo magazzino (WarehouseA) è più grande e può contenere fino a 100 prodotti.
+Il secondo magazzino (WarehouseB) è più piccolo e può contenere fino a 50 prodotti.
+
+I prodotti che i magazzini possono contenere possono essere di 4 tipi :
+
+- Televisori
+- Lavatrici
+- Smartphone
+- Frigoriferi
+
+ All'avvio del programma WarehouseB è vuoto mentre WarehouseA possiede:
+
+ - 10 Televisori
+- 5 Lavatrici
+- 50 Smartphone
+- 5 Frigoriferi
+
+ Compito dei magazzini è evadere gli ordini che arrivano dal sito e-commerce di riferimento. Gli ordini sono composti da 2 prodotti casuali tra i 4 tipi disponibili (casuali e sono ammesse tipologie uguali). 
+ 
+ Per evadere gli ordini viene utilizzata la logica di magazzino :
+
+ - viene cercata disponibilità nel WarehouseA per ciascun prodotto dell'ordine e in caso di assenza di disponibilità viene ricercato il prodotto nel WarehouseB.
+- quando tutti i prodotti vengono trovati viene emessa una Bolla che contiene le seguenti informazioni :
+
+                               - id bolla a 8 cifre
+                               - Spedizione1 : che contiene a sua volta:
+                                                               - tipo prodotto
+                                                               - magazzino di allocazione
+                               - Spedizione2 : come Spedizione1
+                               - Stato : SPEDITO
+
+  - se uno o entrambe i prodotti non sono disponibili l'ordine viene annullato (gestire la casistica mediante l'utilizzo delle eccezioni) e prodotta una Bolla con stato ANNULLATO
+  
+  FACOLTATIVO : si implementi anche un camion che ogni 10 ordini rifornisca il WarehouseA con 5 prodotti di tipo casuale ed il WarehouseB con 10 prodotti di tipo casuale.
+  
+  Il programma terminerà la sua esecuzione quando non sarà più possibile evadere ordini, stampando TUTTE LE BOLLE prodotte.

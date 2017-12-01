@@ -1,0 +1,4 @@
+[http]
+	proxy = miln.proxy.corp.sopra:8080
+[https]
+	proxy = miln.proxy.corp.sopra:8080
