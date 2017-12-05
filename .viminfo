@@ -12,7 +12,7 @@
 ~h
 # Riga di Comando Storia (da più recente a meno recente):
 :x!
-|2,0,1512134216,,"x!"
+|2,0,1512468130,,"x!"
 
 # Stringa di Ricerca Storia (da più recente a meno recente):
 
@@ -28,24 +28,29 @@
 |3,1,36,0,1,0,1512133915,"w"
 
 # File mark:
-'0  1  2  ~/.git/COMMIT_EDITMSG
-|4,48,1,2,1512134216,"~/.git/COMMIT_EDITMSG"
+'0  1  21  ~/.git/COMMIT_EDITMSG
+|4,48,1,21,1512468130,"~/.git/COMMIT_EDITMSG"
+'1  1  2  ~/.git/COMMIT_EDITMSG
+|4,49,1,2,1512134216,"~/.git/COMMIT_EDITMSG"
 
 # Jumplist (dai più recenti):
+-'  1  21  ~/.git/COMMIT_EDITMSG
+|4,39,1,21,1512468130,"~/.git/COMMIT_EDITMSG"
 -'  1  2  ~/.git/COMMIT_EDITMSG
 |4,39,1,2,1512134216,"~/.git/COMMIT_EDITMSG"
 
 # Storia dei mark all'interno dei file (dai più recenti ai meno recenti):
 
 > ~/.git/COMMIT_EDITMSG
-	*	1512134200	0
-	"	1	2
-	^	1	3
-	.	1	3
+	*	1512468124	0
+	"	1	21
+	^	1	22
+	.	2	0
 	+	1	2
 	+	2	0
 	+	1	6
 	+	1	3
 	+	1	0
 	+	11	1
-	+	1	3
+	+	1	22
+	+	2	0
