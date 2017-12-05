@@ -1,0 +1,52 @@
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan base-package = "main.java.web" />
+	<context:component-scan base-package = "main.java.service" />
+	<context:component-scan base-package = "main.java.dao" />
+	
+	
+	<bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name = "prefix" value = "/WEB-INF/jsp/" />
+		<property name = "suffix" value = ".jsp" />
+	</bean>
+	
+	<bean id="magazziniService" class="main.java.service.MagazziniServiceImpl" />
+	<bean id="prodottiService" class="main.java.service.ProdottiServiceImpl" />
+	<bean id="bolleService" class="main.java.service.BolleServiceImpl" />
+	<bean id="contenutiService" class="main.java.service.ContenutiServiceImpl" />
+	  
+	<bean id="magazziniDao" class="main.java.dao.MagazziniDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean> 
+	  
+	<bean id="prodottiDao" class="main.java.dao.ProdottiDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean> 
+		
+	<bean id="contenutiDao" class="main.java.dao.ContenutiDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean> 
+	
+	<bean id="bolleDao" class="main.java.dao.BolleDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean> 
+	  
+	<!-- Database Configurations -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/ordini" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+	
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean> 
+  
+</beans>
