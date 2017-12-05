@@ -16,8 +16,7 @@ public class ContenutiServiceImpl implements ContenutiService {
 	private ContenutiDao contentDao;
 	@Autowired
 	private ProdottiService productService;
-	@Autowired
-	private MagazziniService service;
+
 	
 	Random rnd = new Random();
 	
