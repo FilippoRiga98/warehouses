@@ -9,7 +9,9 @@ import main.java.pojo.Prodotti;
 import main.java.pojo.TipoProdotti;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ProdottiServiceImpl implements ProdottiService {
 
 	@Autowired

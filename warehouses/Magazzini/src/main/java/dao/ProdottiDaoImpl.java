@@ -7,10 +7,12 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 
 import main.java.dto.ProdottiDto;
 import main.java.dto.TipoProdottiDto;
 
+@Repository
 public class ProdottiDaoImpl implements ProdottiDao{
 
 	@Autowired

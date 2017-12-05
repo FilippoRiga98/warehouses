@@ -9,6 +9,7 @@ import main.java.service.ContenutiService;
 import main.java.service.MagazziniService;
 import main.java.service.ProdottiService;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -28,6 +29,7 @@ public class MagazziniController {
 	@Autowired
 	private BolleService billService;
 	
+	private static Logger log = Logger.getLogger(MagazziniController.class.getName());
 	
 	Random rnd = new Random();
 	
@@ -35,6 +37,7 @@ public class MagazziniController {
 	public String homePage()
 	{
 		//Si cancella il contenuto dei magazzini e delle bolle
+		log.debug("Inizializzazione contenuti");
 		service.truncateTable("bolle");
 		service.deleteTable("contenuti");
 		contentService.initializeWarehouses();
@@ -68,6 +71,9 @@ public class MagazziniController {
 	{
 		//Save su DATABASE del prodotto inserito
 		productService.saveProduct(prodotto);
+		log.debug("Inserimento nuovo prodotto: " + prodotto.getMarcaProdotto() + " - " 
+				+ prodotto.getModelloProdotto() + " - " 
+				+ prodotto.getTipoProdotto());
 		return "redirect:/home";
 	}
 	

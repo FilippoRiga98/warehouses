@@ -6,21 +6,24 @@
    http://www.springframework.org/schema/context 
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
+<!-- Context:component scan for @Controller, @Repository, @Service -->
 	<context:component-scan base-package = "main.java.web" />
 	<context:component-scan base-package = "main.java.service" />
 	<context:component-scan base-package = "main.java.dao" />
 	
-	
+<!-- View resolver -->
 	<bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name = "prefix" value = "/WEB-INF/jsp/" />
 		<property name = "suffix" value = ".jsp" />
 	</bean>
 	
+<!-- Bean @Service definition -->
 	<bean id="magazziniService" class="main.java.service.MagazziniServiceImpl" />
 	<bean id="prodottiService" class="main.java.service.ProdottiServiceImpl" />
 	<bean id="bolleService" class="main.java.service.BolleServiceImpl" />
 	<bean id="contenutiService" class="main.java.service.ContenutiServiceImpl" />
-	  
+	
+<!-- Bean @Repository definition -->  
 	<bean id="magazziniDao" class="main.java.dao.MagazziniDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean> 
@@ -37,7 +40,7 @@
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean> 
 	  
-	<!-- Database Configurations -->
+<!-- Database Configurations -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/ordini" />
