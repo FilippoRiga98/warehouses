@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/webflow
+	 http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
+	 
+	 <var name="prodotto" class="main.java.pojo.Prodotti" />
+	 
+	 <on-start>
+		<evaluate expression=" prodottiService.getAllTypes()" result="flowScope.productTypes"></evaluate> 
+	 </on-start>
+	 
+	 <view-state id="selectTipoProdotto" view="addproduct-type" model="prodotto">
+		 	<transition on="next" to="displayAddProductView" />
+		 	<transition on="home" to="returnHome"/>
+	 </view-state>
+	 
+	 <view-state id="displayAddProductView" view="addproduct-form" model="prodotto">
+		 	<transition on="save" to="saveProduct" />
+		 	<transition on="back" to="selectTipoProdotto" />
+		 	<transition on="home" to="returnHome" bind="false" validate="false"/>
+	 </view-state>
+	 
+	 <action-state id="saveProduct">
+		  <evaluate expression="prodottiService.saveProduct(prodotto)" />
+		  <transition on="true" to="returnHome" />
+		  <transition on="false" to="fail"/>
+	 </action-state>
+	 
+	 <end-state id="returnHome" view="externalRedirect:/home" />
+	 <end-state id="fail" view="addproduct-error" />
+	 
+ </flow>
