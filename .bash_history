@@ -20,3 +20,14 @@ git status
 git add Magazzini/
 git status
 git commit -m "adding pom and Spring Web Flow"
+git status
+git add *
+git status
+git add -A
+git status
+git commit -m "2018-01-11"
+git status
+git checkout master
+git status
+git merge feature_x
+git status
