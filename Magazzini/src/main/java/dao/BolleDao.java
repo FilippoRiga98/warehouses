@@ -4,9 +4,7 @@ import java.util.ArrayList;
 
 import main.java.dto.BolleDto;
 
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface BolleDao {
 
 	public void saveBill(BolleDto bill);

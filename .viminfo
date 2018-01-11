@@ -13,9 +13,16 @@
 # Riga di Comando Storia (da più recente a meno recente):
 :x!
 <<<<<<< HEAD
+<<<<<<< HEAD
 |2,0,1512134901,,"x!"
 =======
 |2,0,1512468130,,"x!"
+>>>>>>> feature_x
+=======
+|2,0,1512468130,,"x!"
+=======
+|2,0,1512134901,,"x!"
+>>>>>>> 20ce457a0de1880cd897abcb11eb421c97be2d00
 >>>>>>> feature_x
 
 # Stringa di Ricerca Storia (da più recente a meno recente):
@@ -33,24 +40,43 @@
 
 # File mark:
 <<<<<<< HEAD
+<<<<<<< HEAD
 '0  1  0  ~/.git/MERGE_MSG
 |4,48,1,0,1512134901,"~/.git/MERGE_MSG"
 =======
 '0  1  21  ~/.git/COMMIT_EDITMSG
 |4,48,1,21,1512468130,"~/.git/COMMIT_EDITMSG"
 >>>>>>> feature_x
+=======
+'0  1  21  ~/.git/COMMIT_EDITMSG
+|4,48,1,21,1512468130,"~/.git/COMMIT_EDITMSG"
+=======
+'0  1  0  ~/.git/MERGE_MSG
+|4,48,1,0,1512134901,"~/.git/MERGE_MSG"
+>>>>>>> 20ce457a0de1880cd897abcb11eb421c97be2d00
+>>>>>>> feature_x
 '1  1  2  ~/.git/COMMIT_EDITMSG
 |4,49,1,2,1512134216,"~/.git/COMMIT_EDITMSG"
 
 # Jumplist (dai più recenti):
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+-'  1  21  ~/.git/COMMIT_EDITMSG
+|4,39,1,21,1512468130,"~/.git/COMMIT_EDITMSG"
+=======
+>>>>>>> feature_x
 -'  1  0  ~/.git/MERGE_MSG
 |4,39,1,0,1512134901,"~/.git/MERGE_MSG"
 -'  1  2  ~/.git/COMMIT_EDITMSG
 |4,39,1,2,1512134216,"~/.git/COMMIT_EDITMSG"
+<<<<<<< HEAD
 =======
 -'  1  21  ~/.git/COMMIT_EDITMSG
 |4,39,1,21,1512468130,"~/.git/COMMIT_EDITMSG"
+>>>>>>> feature_x
+=======
+>>>>>>> 20ce457a0de1880cd897abcb11eb421c97be2d00
 >>>>>>> feature_x
 -'  1  2  ~/.git/COMMIT_EDITMSG
 |4,39,1,2,1512134216,"~/.git/COMMIT_EDITMSG"

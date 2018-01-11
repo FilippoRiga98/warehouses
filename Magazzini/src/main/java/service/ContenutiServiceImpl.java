@@ -4,20 +4,21 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import main.java.dao.ContenutiDao;
 import main.java.dto.ContenutiDto;
 import main.java.pojo.Contenuti;
 import main.java.pojo.Prodotti;
 
+@Service
 public class ContenutiServiceImpl implements ContenutiService {
 
 	@Autowired
 	private ContenutiDao contentDao;
 	@Autowired
 	private ProdottiService productService;
-	@Autowired
-	private MagazziniService service;
+
 	
 	Random rnd = new Random();
 	
