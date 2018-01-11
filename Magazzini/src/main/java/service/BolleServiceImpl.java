@@ -5,18 +5,17 @@ import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.stereotype.Service;
 
 import main.java.dao.BolleDao;
-import main.java.dao.ProdottiDao;
 import main.java.dto.BolleDto;
 import main.java.pojo.Bolle;
 import main.java.pojo.Contenuti;
 import main.java.pojo.Prodotti;
 
+@Service
 public class BolleServiceImpl implements BolleService{
 
-	@Autowired
-	private ProdottiDao productDao;
 	@Autowired
 	private BolleDao billDao;
 	@Autowired
