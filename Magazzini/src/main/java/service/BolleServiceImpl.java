@@ -136,7 +136,7 @@ public class BolleServiceImpl implements BolleService{
 			find2 = true;
 		}
 		
-		/**Creazione dell'id delle bolle che deve essere a 8 cifre, se un id è già presente all'interno della
+		/**Creazione dell'id delle bolle che deve essere a 8 cifre, se un id ï¿½ giï¿½ presente all'interno della
 		 * table bolle nel DATABASE parte l'eccezione che, grazie al ciclo do-while ricrea l'id della Bolla*/
 		boolean idSet = false;
 		do{
