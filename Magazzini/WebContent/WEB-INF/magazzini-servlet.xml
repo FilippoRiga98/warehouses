@@ -19,10 +19,10 @@
 		<property name = "suffix" value = ".jsp" />
 	</bean>
 	
-	<bean id="magazziniService" class="main.java.service.MagazziniServiceImpl" />
-	<bean id="prodottiService" class="main.java.service.ProdottiServiceImpl" />
-	<bean id="bolleService" class="main.java.service.BolleServiceImpl" />
-	<bean id="contenutiService" class="main.java.service.ContenutiServiceImpl" />
+	<bean id="magazziniService" class="main.java.service.impl.MagazziniServiceImpl" />
+	<bean id="prodottiService" class="main.java.service.impl.ProdottiServiceImpl" />
+	<bean id="bolleService" class="main.java.service.impl.BolleServiceImpl" />
+	<bean id="contenutiService" class="main.java.service.impl.ContenutiServiceImpl" />
 	  
 	<bean id="magazziniDao" class="main.java.dao.MagazziniDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
