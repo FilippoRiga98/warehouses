@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import main.java.dao.ParameterizedRowMapper;
 import main.java.dao.ProdottiDao;
 import main.java.dto.ProdottiDto;
 import main.java.dto.TipoProdottiDto;
