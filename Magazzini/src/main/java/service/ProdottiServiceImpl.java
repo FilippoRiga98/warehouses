@@ -2,14 +2,13 @@ package main.java.service;
 
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import main.java.dao.ProdottiDao;
 import main.java.dto.ProdottiDto;
 import main.java.dto.TipoProdottiDto;
 import main.java.pojo.Prodotti;
 import main.java.pojo.TipoProdotti;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 public class ProdottiServiceImpl implements ProdottiService {
 

@@ -75,7 +75,7 @@ public class ContenutiServiceImpl implements ContenutiService {
 			 rnd = new Random();
 			 Contenuti tmp = new Contenuti();
 			 /**Tramite un indice casuale < = alla grandezza delle liste per tipo di prodotto viene settato l'id
-			  * di "tmp che andrà poi inserito in warehouseA e infine salvato su DATABASE"*/
+			  * di "tmp che andrï¿½ poi inserito in warehouseA e infine salvato su DATABASE"*/
 			 if(i < numTelevisori) 
 			 {
 				 tmp.setIdProdotto(televisori.get(rnd.nextInt(televisori.size())).getIdProdotto());	
@@ -105,7 +105,7 @@ public class ContenutiServiceImpl implements ContenutiService {
 		
 		ArrayList<Contenuti> warehouseA = getWarehouseAvailableContent("warehouseA");
 		ArrayList<Contenuti> warehouseB = getWarehouseAvailableContent("warehouseB");
-		//Controllo della possibilità di evadere ancora ordini
+		//Controllo della possibilitï¿½ di evadere ancora ordini
 		boolean stop = false;
 		if((warehouseA.size() + warehouseB.size()) < 2)
 		{

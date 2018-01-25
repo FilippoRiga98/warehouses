@@ -8,7 +8,7 @@ import main.java.dto.TipoProdottiDto;
 
 public interface ProdottiDao {
 
-	public ArrayList<TipoProdottiDto> getAllTypes();
+	ArrayList<TipoProdottiDto> getAllTypes();
 	public void saveProduct(ProdottiDto prodotto);
 	public ArrayList<ProdottiDto> getAllProducts();
 	public ArrayList<ProdottiDto> getAllProductsByType(String type);
