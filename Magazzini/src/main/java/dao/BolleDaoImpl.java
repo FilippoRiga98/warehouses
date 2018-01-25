@@ -15,7 +15,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class BolleDaoImpl implements BolleDao{
 
-	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {    
