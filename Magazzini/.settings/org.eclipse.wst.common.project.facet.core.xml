@@ -1,23 +1,7 @@
-<<<<<<< HEAD:Magazzini/.settings/org.eclipse.wst.common.project.facet.core.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
-  <runtime name="Apache Tomcat v7.0"/>
   <fixed facet="wst.jsdt.web"/>
-  <fixed facet="jst.web"/>
-  <fixed facet="java"/>
-  <installed facet="jst.web" version="3.0"/>
-  <installed facet="wst.jsdt.web" version="1.0"/>
   <installed facet="java" version="1.8"/>
-</faceted-project>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<faceted-project>
-  <runtime name="Apache Tomcat v7.0"/>
-  <fixed facet="wst.jsdt.web"/>
-  <fixed facet="jst.web"/>
-  <fixed facet="java"/>
-  <installed facet="java" version="1.7"/>
-  <installed facet="jst.web" version="3.0"/>
+  <installed facet="jst.web" version="3.1"/>
   <installed facet="wst.jsdt.web" version="1.0"/>
 </faceted-project>
->>>>>>> 20ce457a0de1880cd897abcb11eb421c97be2d00:warehouses/Magazzini/.settings/org.eclipse.wst.common.project.facet.core.xml

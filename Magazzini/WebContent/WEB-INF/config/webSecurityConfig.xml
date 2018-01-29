@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/security 
+    http://www.springframework.org/schema/security/spring-security-4.2.xsd
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+ 
+   <http use-expressions="true">
+   <!-- Gli utenti anonimi possono accedere alla pagina di login per autenticarsi -->
+      <intercept-url pattern="/login*" access="isAnonymous()" />
+   <!-- Nessun utente se non è registrato puo accedere a qualsisi altro url che non sia la login page. Le regole più generali vengono sempre dopo quelle specifiche -->
+      <intercept-url pattern="/**" access="isAuthenticated()"/>
+ 
+      <form-login
+         login-page='/login'
+         login-processing-url="/performlogin"
+         default-target-url="/home"
+         authentication-failure-url="/login?error=true" 
+         always-use-default-target="true"/>
+ 
+      <logout logout-success-url="/login" />
+ 
+   </http>
+   
+   <authentication-manager>
+      <authentication-provider>
+         <user-service>
+            <user name="user1234" password="1234" authorities="ROLE_USER" />
+         </user-service>
+      </authentication-provider>
+   </authentication-manager>
+</beans:beans>

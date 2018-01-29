@@ -3,6 +3,8 @@ package main.java.service;
 import java.util.ArrayList;
 import java.util.Random;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
@@ -16,11 +18,11 @@ import main.java.pojo.Prodotti;
 @Service
 public class BolleServiceImpl implements BolleService{
 
-	@Autowired
+	@Resource(name = "bolleDao")
 	private BolleDao billDao;
-	@Autowired
+	@Resource(name = "prodottiServiceImpl")
 	private ProdottiService productService;
-	@Autowired
+	@Resource(name = "contenutiServiceImpl")
 	private ContenutiService contentService;
 	
 	Random rnd = new Random();

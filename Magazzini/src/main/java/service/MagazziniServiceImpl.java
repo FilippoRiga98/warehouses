@@ -1,5 +1,7 @@
 package main.java.service;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,7 +10,7 @@ import main.java.dao.MagazziniDao;
 @Service
 public class MagazziniServiceImpl implements MagazziniService {
 
-	@Autowired
+	@Resource(name = "magazziniDao")
 	private MagazziniDao dao;
 	
 	@Override

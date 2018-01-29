@@ -11,7 +11,7 @@
 
 	<mvc:annotation-driven />
 
-	<context:component-scan base-package = "main.java" />
+	<context:component-scan base-package="main.java.*" />
 	
 	
 	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -19,24 +19,24 @@
 		<property name = "suffix" value = ".jsp" />
 	</bean>
 	
-	<bean id="magazziniService" class="main.java.service.impl.MagazziniServiceImpl" />
-	<bean id="prodottiService" class="main.java.service.impl.ProdottiServiceImpl" />
-	<bean id="bolleService" class="main.java.service.impl.BolleServiceImpl" />
-	<bean id="contenutiService" class="main.java.service.impl.ContenutiServiceImpl" />
+	<!-- <bean id="magazziniService" class="main.java.service.MagazziniServiceImpl" />
+	<bean id="prodottiService" class="main.java.service.ProdottiServiceImpl" />
+	<bean id="bolleService" class="main.java.service.BolleServiceImpl" />
+	<bean id="contenutiService" class="main.java.service.ContenutiServiceImpl" /> -->
 	  
-	<bean id="magazziniDao" class="main.java.dao.MagazziniDaoImpl">
+	<bean id="magazziniDao" class="main.java.dao.impl.MagazziniDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean> 
 	  
-	<bean id="prodottiDao" class="main.java.dao.ProdottiDaoImpl">
+	<bean id="prodottiDao" class="main.java.dao.impl.ProdottiDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean> 
 		
-	<bean id="contenutiDao" class="main.java.dao.ContenutiDaoImpl">
+	<bean id="contenutiDao" class="main.java.dao.impl.ContenutiDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean> 
 	
-	<bean id="bolleDao" class="main.java.dao.BolleDaoImpl">
+	<bean id="bolleDao" class="main.java.dao.impl.BolleDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean> 
 	  

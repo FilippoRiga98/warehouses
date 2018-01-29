@@ -2,7 +2,9 @@ package main.java.service;
 
 import java.util.ArrayList;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
 
 import main.java.dao.ProdottiDao;
 import main.java.dto.ProdottiDto;
@@ -10,9 +12,10 @@ import main.java.dto.TipoProdottiDto;
 import main.java.pojo.Prodotti;
 import main.java.pojo.TipoProdotti;
 
+@Service
 public class ProdottiServiceImpl implements ProdottiService {
 
-	@Autowired
+	@Resource(name = "prodottiDao")
 	private ProdottiDao productDao;
 	
 	@Override

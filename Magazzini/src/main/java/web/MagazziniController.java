@@ -3,29 +3,28 @@ package main.java.web;
 import java.text.DecimalFormat;
 import java.util.Random;
 
-import main.java.pojo.Prodotti;
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import main.java.pojo.User;
 import main.java.service.BolleService;
 import main.java.service.ContenutiService;
 import main.java.service.MagazziniService;
 import main.java.service.ProdottiService;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-
 @Controller
 public class MagazziniController {
 
-	@Autowired
+	@Resource(name = "magazziniServiceImpl")
 	private MagazziniService service;
-	@Autowired
+	@Resource(name = "prodottiServiceImpl")
 	private ProdottiService productService;
-	@Autowired
+	@Resource(name = "contenutiServiceImpl")
 	private ContenutiService contentService;
-	@Autowired
+	@Resource(name = "bolleServiceImpl")
 	private BolleService billService;
 	
 	
@@ -38,8 +37,17 @@ public class MagazziniController {
 		service.truncateTable("bolle");
 		service.deleteTable("contenuti");
 		contentService.initializeWarehouses();
-		return "redirect:/home";
+		return "redirect:/login";
 	}	
+	
+	@RequestMapping("/login")
+	public ModelAndView showLoginForm() 
+	{
+		ModelAndView mav = new ModelAndView("login");
+		User user = new User();
+		mav.addObject("user", user);
+		return mav;
+	}
 	
 	@RequestMapping("/home")
     public ModelAndView showHome()
@@ -52,25 +60,6 @@ public class MagazziniController {
         return mav;
     }
 	
-	/*@RequestMapping("/addproduct")
-	public ModelAndView showProductForm()
-	{
-		ModelAndView mav = new ModelAndView("addproduct");
-		//Read da DATABASE dei tipi di prodotti che popoleranno il select in addproduct.jsp
-		mav.addObject("typeList", productService.getAllTypes());
-		Prodotti prodotto = new Prodotti();
-		mav.addObject("product", prodotto);
-		return mav;
-	}*/
-	
-	/*@RequestMapping(value = "/saveproduct", method = RequestMethod.POST)
-	public String saveProduct(@ModelAttribute("product") Prodotti prodotto)
-	{
-		//Save su DATABASE del prodotto inserito
-		productService.saveProduct(prodotto);
-		return "redirect:/home";
-	}*/
-	
 	@RequestMapping("/order")
 	public String orderProducts()
 	{ 
@@ -82,7 +71,7 @@ public class MagazziniController {
 	public ModelAndView showBills()
 	{
 		ModelAndView mav = new ModelAndView("viewbill");
-		boolean stop = contentService.areEmpty(); //Controlla se è possibile evadere ordini
+		boolean stop = contentService.areEmpty(); //Controlla se ï¿½ possibile evadere ordini
 		DecimalFormat df = new DecimalFormat("#.#");
 		double numOrdiniConSuccesso = billService.countOrdersByState(true);
 		double numOrdiniSenzaSuccesso = billService.countOrdersByState(false);

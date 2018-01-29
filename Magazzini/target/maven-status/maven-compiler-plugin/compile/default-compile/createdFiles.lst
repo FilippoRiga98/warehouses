@@ -11,6 +11,7 @@ main\java\dao\impl\ProdottiDaoImpl$ProdottoMapper.class
 main\java\pojo\Contenuti.class
 main\java\service\ProdottiServiceImpl.class
 main\java\dao\ProdottiDao.class
+main\java\pojo\User.class
 main\java\pojo\Warehouses.class
 main\java\pojo\Prodotti.class
 main\java\dao\MagazziniDao.class
